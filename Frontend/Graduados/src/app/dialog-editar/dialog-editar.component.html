@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Editar Información</h2>
+
+<mat-dialog-content>    
+    <div>
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>Year</mat-label>
+            <input matInput id = "year" name="year" [matDatepicker]="myDatePicker" [(ngModel)]="data.year">
+            <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+            <mat-datepicker #myDatePicker></mat-datepicker>
+        </mat-form-field>
+        
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>Sex</mat-label>
+            <input matInput id="sex" name="sex" [(ngModel)]="data.sex">
+        </mat-form-field>
+    
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>Type of course</mat-label>
+            <input matInput id="type_of_course" name="type_of_course" [(ngModel)]="data.type_of_course">
+        </mat-form-field>
+    
+        <mat-form-field floatLabel="auto" appearance="outline">
+            <mat-label>No. of graduates</mat-label>
+            <input type="number" matInput id="no_of_graduates" name="no_of_graduates" [(ngModel)]="data.no_of_graduates">
+        </mat-form-field>
+    </div>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+        <mat-icon color="primary">save</mat-icon>
+    </button>
+    <button mat-button (click) = "cancelar()"> 
+        <mat-icon color="accent">cancel</mat-icon>
+    </button>
+</mat-dialog-actions>

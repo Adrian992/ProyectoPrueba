@@ -1,0 +1,39 @@
+<br/>
+<br/>
+<div class="centrar">
+    <div class="mat-display-1" >Registro de Graduados</div>
+</div>
+<div>
+  <form (ngSubmit)="registrarGraduado()">
+
+    <mat-form-field floatLabel="auto" appearance="outline">
+        <mat-label>Year</mat-label>
+        <input matInput id = "year" name="year" [matDatepicker]="myDatePicker" [(ngModel)]="graduado.year">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+    
+    <mat-form-field floatLabel="auto" appearance="outline">
+        <mat-label>Sex</mat-label>
+        <input matInput id="sex" name="sex" [(ngModel)]="graduado.sex">
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" appearance="outline">
+        <mat-label>Type of course</mat-label>
+        <input matInput id="type_of_course" name="type_of_course" [(ngModel)]="graduado.type_of_course">
+    </mat-form-field>
+
+    <mat-form-field floatLabel="auto" appearance="outline">
+        <mat-label>No. of graduates</mat-label>
+        <input type="number" matInput id="no_of_graduates" name="no_of_graduates" [(ngModel)]="graduado.no_of_graduates">
+    </mat-form-field>
+
+    <br/>
+    <br/>
+     
+    <div class="centrar">
+        <button class="editarBoton" mat-raised-button color="primary"> Guardar </button>
+    </div>
+
+  </form>
+</div>
