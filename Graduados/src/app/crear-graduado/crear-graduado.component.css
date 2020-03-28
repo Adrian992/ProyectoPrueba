@@ -1,0 +1,14 @@
+mat-form-field {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.centrar {
+    text-align:center;
+    margin:0px auto;
+}
+
+.editarBoton {
+    width: 8rem;
+    height: 4rem;
+}
