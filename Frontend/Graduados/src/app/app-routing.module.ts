@@ -6,6 +6,7 @@ import { ListarGraduadoComponent } from './listar-graduado/listar-graduado.compo
 
 
 const routes: Routes = [
+  {path:'', redirectTo:'Listar-Graduado', pathMatch:'full'},
   {path:'Listar-Graduado', component:ListarGraduadoComponent},
   {path:'Crear-Graduado', component:CrearGraduadoComponent}
 ];

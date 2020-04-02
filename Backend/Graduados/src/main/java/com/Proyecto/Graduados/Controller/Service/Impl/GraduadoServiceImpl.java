@@ -47,4 +47,9 @@ public class GraduadoServiceImpl implements IGraduadoService {
 		return graduadoRepository.findAll();
 	}
 
+	@Override
+	public List<Graduado> buscarPorTipoCurso(String type_of_course) {
+		return graduadoRepository.findByTipoCurso(type_of_course);
+	}
+
 }

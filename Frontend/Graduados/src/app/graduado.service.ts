@@ -30,5 +30,9 @@ export class GraduadoService {
   getGraduado(id:number):Observable<any>{
     return this.http.get(`${this.baseURL}/${id}`);
   }
+
+  getGraduadosListTypeCourse(type_of_course:string):Observable<any>{
+    return this.http.get(`${this.baseURL}/listarPorTipoCurso/${type_of_course}`);
+  }
   
 }

@@ -9,8 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import lombok.Data;
 
 @Entity
@@ -21,7 +19,6 @@ public class Graduado {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@DateTimeFormat(pattern = "dd/mm/yyyy")
 	@Column(name="year", nullable=false)
 	private Date year;
 	

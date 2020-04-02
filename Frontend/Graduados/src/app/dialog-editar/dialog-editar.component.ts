@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Graduado } from '../model/graduado';
-import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { GraduadoService } from '../graduado.service';
 
 @Component({
   selector: 'app-dialog-editar',
@@ -9,12 +10,15 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class DialogEditarComponent implements OnInit {
 
-  //graduado: Graduado = new Graduado();
-
   constructor(public dialogRef: MatDialogRef<DialogEditarComponent>,
-    @ Inject(MAT_DIALOG_DATA) public data: Graduado) { }
+    private graduadoService:GraduadoService,
+    @Inject(MAT_DIALOG_DATA) public data: Graduado) { }
 
   ngOnInit() {
+    let id = localStorage.getItem("id");
+    
+    this.graduadoService.getGraduado(parseInt(id))
+    .subscribe(datos=>{this.data=datos});
   }
 
   cancelar(){

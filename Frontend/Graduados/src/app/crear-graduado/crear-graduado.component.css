@@ -1,4 +1,4 @@
-mat-form-field {
+.mat-form-field {
     margin-right: 3rem;
     margin-left: 3rem;
 }
@@ -8,7 +8,8 @@ mat-form-field {
     margin:0px auto;
 }
 
-.editarBoton {
-    width: 8rem;
-    height: 4rem;
+.botonGuardar {
+    font-size: 60px;
+    margin-right: 40px;
 }
+

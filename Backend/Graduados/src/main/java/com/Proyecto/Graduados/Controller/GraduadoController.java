@@ -93,4 +93,17 @@ public class GraduadoController {
 		
 		return new ResponseEntity<Graduado>(graduado.get(), HttpStatus.OK);
 	}
+	
+	
+	@GetMapping(value = "/listarPorTipoCurso/{type_of_course}")
+	@ApiOperation(value="Listar Graduados por tipo de curso", notes="Servicio para listar graduados por tipo de curso")
+	@ApiResponses(value= { @ApiResponse(code=201, message="Graduados encontrados"), 
+			@ApiResponse(code=404,message="Graduados no encontrados")})
+	public ResponseEntity<List<Graduado>> listarPorTipoCurso(@PathVariable("type_of_course") String type_of_course) {
+		List<Graduado> graduados = GraduadoService.buscarPorTipoCurso(type_of_course);
+		
+		return new ResponseEntity<List<Graduado>>(graduados, HttpStatus.OK);
+	}
+	
+	
 }

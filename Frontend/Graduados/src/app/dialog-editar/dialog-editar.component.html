@@ -3,10 +3,10 @@
 <mat-dialog-content>    
     <div>
         <mat-form-field floatLabel="auto" appearance="outline">
-            <mat-label>Year</mat-label>
-            <input matInput id = "year" name="year" [matDatepicker]="myDatePicker" [(ngModel)]="data.year">
+            <mat-label>Year {{data.year | date:'yyyy'}}</mat-label>
+            <input matInput id = "year" name="year" [(ngModel)]="data.year" [matDatepicker]="myDatePicker">
             <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
-            <mat-datepicker #myDatePicker></mat-datepicker>
+            <mat-datepicker #myDatePicker startView="multi-year"></mat-datepicker>
         </mat-form-field>
         
         <mat-form-field floatLabel="auto" appearance="outline">
@@ -25,14 +25,13 @@
         </mat-form-field>
     </div>
 
-
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+    <button mat-icon-button [mat-dialog-close]="data" cdkFocusInitial>
         <mat-icon color="primary">save</mat-icon>
     </button>
-    <button mat-button (click) = "cancelar()"> 
+    <button mat-icon-button (click) = "cancelar()"> 
         <mat-icon color="accent">cancel</mat-icon>
     </button>
 </mat-dialog-actions>

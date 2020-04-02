@@ -1,8 +1,10 @@
 <br/>
 <br/>
+
 <div class="centrar">
     <div class="mat-display-1" >Registro de Graduados</div>
 </div>
+
 <div>
   <form (ngSubmit)="registrarGraduado()">
 
@@ -10,7 +12,7 @@
         <mat-label>Year</mat-label>
         <input matInput id = "year" name="year" [matDatepicker]="myDatePicker" [(ngModel)]="graduado.year">
         <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
-        <mat-datepicker #myDatePicker></mat-datepicker>
+        <mat-datepicker #myDatePicker startView="multi-year"></mat-datepicker>
     </mat-form-field>
     
     <mat-form-field floatLabel="auto" appearance="outline">
@@ -32,7 +34,9 @@
     <br/>
      
     <div class="centrar">
-        <button class="editarBoton" mat-raised-button color="primary"> Guardar </button>
+        <button mat-icon-button>
+            <mat-icon class="botonGuardar" color="primary">save</mat-icon>
+        </button>
     </div>
 
   </form>

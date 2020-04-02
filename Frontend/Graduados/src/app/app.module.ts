@@ -3,23 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { ListarGraduadoComponent } from './listar-graduado/listar-graduado.component';
 import { CrearGraduadoComponent } from './crear-graduado/crear-graduado.component';
+import { DialogEditarComponent } from './dialog-editar/dialog-editar.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import {MatButtonModule, MatToolbarModule, MatTabsModule, MatTableModule, 
         MatIconModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, 
-        MatNativeDateModule, MatDialogModule } from '@angular/material';
-import { DialogEditarComponent } from './dialog-editar/dialog-editar.component';
+        MatNativeDateModule, MatDialogModule, MatPaginatorModule, MatSnackBarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarGraduadoComponent,
     CrearGraduadoComponent,
-    DialogEditarComponent 
+    DialogEditarComponent
   ],
   entryComponents:[DialogEditarComponent],
   imports: [
@@ -28,16 +30,19 @@ import { DialogEditarComponent } from './dialog-editar/dialog-editar.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatTabsModule,
-    MatTableModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatDialogModule
+
+    MatButtonModule, //..
+    MatToolbarModule,//...
+    MatTabsModule, //...
+    MatTableModule, //..
+    MatIconModule, //...
+    MatFormFieldModule, //...
+    MatInputModule, //..
+    MatDatepickerModule, //...
+    MatNativeDateModule, //..
+    MatDialogModule, //...
+    MatPaginatorModule, // ...
+    MatSnackBarModule  //...
   ],
   providers: [],
   bootstrap: [AppComponent]
